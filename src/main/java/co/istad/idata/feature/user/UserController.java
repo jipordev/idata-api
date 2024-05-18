@@ -3,6 +3,7 @@ package co.istad.idata.feature.user;
 import co.istad.idata.feature.user.dto.UserCreateRequest;
 import co.istad.idata.feature.user.dto.UserResponse;
 import co.istad.idata.feature.user.dto.UserUpdateRequest;
+import jakarta.validation.Valid;
 import lombok.Getter;
 import lombok.RequiredArgsConstructor;
 import org.springframework.web.bind.annotation.*;
@@ -27,13 +28,13 @@ public class UserController {
     }
 
     @PostMapping
-    UserResponse createUser(@RequestBody UserCreateRequest createRequest){
+    UserResponse createUser(@RequestBody @Valid UserCreateRequest createRequest){
         return userService.createUser(createRequest);
     }
 
     @PutMapping("/id")
     UserResponse updateUser(@PathVariable Long id,
-                            @RequestBody UserUpdateRequest updateRequest){
+                            @RequestBody @Valid UserUpdateRequest updateRequest){
         return userService.updateUserById(id, updateRequest);
     }
 

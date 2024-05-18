@@ -9,7 +9,7 @@ import lombok.*;
 @Builder
 public class BasedError<T> {
 
-    private Integer code;
+    private String code;
 
     private T description;
 
