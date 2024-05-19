@@ -20,27 +20,30 @@ public class User extends Auditable {
     @GeneratedValue(strategy = GenerationType.IDENTITY)
     private Long id;
 
+    @Column(nullable = false, unique = true)
     private String email;
 
+    @Column(nullable = false, length = 50)
     private String firstName;
 
+    @Column(nullable = false, length = 50)
     private String lastName;
 
+    @Column(nullable = false, length = 50)
     private String username;
 
+    @Column(nullable = false, length = 50)
     private String password;
 
     private String uuid;
 
     private String avatar;
 
-    private Boolean isAccountNonExpired;
+    private boolean isAccountNonExpired;
 
-    private Boolean isAccountNonLocked;
+    private boolean isAccountNonLocked;
 
-    private Boolean isAccountStatus;
-
-    private Boolean isCredentialsNonExpired;
+    private boolean isCredentialsNonExpired;
 
     private Boolean isBlocked;
 
