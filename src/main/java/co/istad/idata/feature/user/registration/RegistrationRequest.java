@@ -1,10 +1,8 @@
-package co.istad.idata.feature.user.dto;
+package co.istad.idata.feature.user.registration;
 
-import jakarta.persistence.Column;
 import jakarta.validation.constraints.NotBlank;
-import jakarta.validation.constraints.NotNull;
 
-public record UserCreateRequest(
+public record RegistrationRequest(
 
         @NotBlank(message = "Email is required")
         String email,
@@ -22,9 +20,7 @@ public record UserCreateRequest(
         String password,
 
         @NotBlank(message = "Confirmed password is required")
-        String confirmedPassword,
-
-        String avatar
+        String confirmedPassword
 
 ) {
 }

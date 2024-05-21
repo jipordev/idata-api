@@ -2,7 +2,6 @@ package co.istad.idata.init;
 
 import co.istad.idata.domains.Authority;
 import co.istad.idata.domains.Role;
-import co.istad.idata.feature.user.AuthorityRepository;
 import co.istad.idata.feature.user.RoleRepository;
 import jakarta.annotation.PostConstruct;
 import lombok.RequiredArgsConstructor;
@@ -12,7 +11,7 @@ import java.util.List;
 
 @Component
 @RequiredArgsConstructor
-public class DataInit {
+public class DataInitRole {
 
     private final RoleRepository roleRepository;
 
